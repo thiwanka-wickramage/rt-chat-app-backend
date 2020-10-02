@@ -1,0 +1,34 @@
+version: '3.3'
+services:
+  db:
+    image: "mongo"
+    env_file:
+      - .env
+    ports:
+      - 27017:27017
+    volumes:
+      - C:\Users\Aux-174\Documents\docker_data\dev\db:/data
+    networks:
+      - webnet
+  redis:
+    image: "redis"
+    ports:
+      - 6379:6379
+    volumes:
+      - C:\Users\Aux-174\Documents\docker_data\dev\redis:/data
+    networks:
+      - webnet
+  app:
+    image: "node:12.18.4"
+    working_dir: /workspace
+    env_file:
+      - .env
+    ports:
+      - 8080:8080
+    volumes:
+      - ./:/workspace
+    networks:
+      - webnet
+    command: sleep infinity
+networks:
+  webnet:

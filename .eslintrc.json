@@ -1,0 +1,17 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": ["eslint:recommended", "google"],
+  "rules": {
+    "semi": "error",
+    "no-console": 0
+  },
+  "env": {
+    "node": true
+  }
+}
