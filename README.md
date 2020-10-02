@@ -30,7 +30,7 @@ Three containers ( nodejs / mongo / redis ) will be up and running.
 
 To run the node application, go the nodejs container terminal execute `npm start`.
 
-Use following command for access for access nodejs terminal.
+Use following command for access nodejs terminal.
 
 `docker ps` : get the container id
 
